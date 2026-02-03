@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sharath Ravindra | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#home">Sharath Ravindra</a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section hero">
+      <div class="container">
+        <h1>Junior Data Analyst</h1>
+        <p class="sub">
+          MSc Data Science (University of Surrey). Python, SQL, Power BI. I build clear analysis and dashboards that support decision-making.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I’m Sharath Ravindra, an MSc Data Science graduate based in the UK. I enjoy turning messy data into clean insights,
+          building dashboards, and analysing patterns using Python and SQL. I’m currently seeking junior data analyst or data-focused roles.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">Python (Pandas, NumPy)</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">EDA & Visualisation</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">NLP (BERT, LDA, NMF)</span>
+          <span class="chip">Git & GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Conversational Analytics (NLP + Knowledge Graph)</h3>
+            <p>
+              Analysed chatbot conversations using sentiment analysis, topic modelling, and Wikidata knowledge graph queries.
+            </p>
+            <div class="meta">
+              <span>Python</span><span>NLP</span><span>Wikidata</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Sharathkumar59/conversational-analytics-nlp-kg" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.notion.so/Sharath-Ravindra-Portfolio-2fc4ef8992bd809cbe4ff7c8f4ee0906" target="_blank" rel="noreferrer">Write-up</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Sales Performance Dashboard (Power BI)</h3>
+            <p>
+              Built an interactive sales performance report showing KPI trends across salespeople, product categories, and geography.
+            </p>
+            <div class="meta">
+              <span>Power BI</span><span>DAX</span><span>Reporting</span>
+            </div>
+            <div class="links">
+              <a href="https://www.notion.so/Sharath-Ravindra-Portfolio-2fc4ef8992bd809cbe4ff7c8f4ee0906" target="_blank" rel="noreferrer">Screenshots</a>
+              <a href="#contact">Request live link</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>911 Emergency Calls (Python EDA)</h3>
+            <p>
+              Explored emergency call patterns by time, day, and category to surface operational insights.
+            </p>
+            <div class="meta">
+              <span>Python</span><span>EDA</span><span>Time Series</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Sharathkumar59/911_emergency" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>SQL Car Dealership Data Model</h3>
+            <p>
+              Designed a relational schema (PK/FK) and wrote join + aggregation queries to answer business questions.
+            </p>
+            <div class="meta">
+              <span>MySQL</span><span>Data Modelling</span><span>JOINs</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Sharathkumar59/sql-car-dealership-data-model" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>If you want to discuss roles or projects, message me here:</p>
+
+        <div class="contact-box">
+          <a class="contact-item" href="mailto:sharathjogi59@gmail.com">sharathjogi59@gmail.com</a>
+          <a class="contact-item" href="https://www.linkedin.com/in/sharath-kumar-j-r-1922ab289" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="contact-item" href="https://github.com/Sharathkumar59" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <small>© <span id="year"></span> Sharath Ravindra</small>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
