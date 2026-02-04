@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sharath Ravindra | Data Analyst Portfolio</title>
+  <title>Sharath Ravindra | Junior Data Analyst</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,11 +26,15 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section id="home" class="section hero">
       <div class="container">
-        <h1>Data Analyst</h1>
+        <h1>Junior Data Analyst</h1>
         <p class="sub">
-          Data Analyst with an MSc in Data Science and professional experience supporting data analysis, reporting, and analytics across industry and academic settings. Experienced in working with SQL, Python, Excel, and Power BI to clean data, analyse trends, and deliver stakeholder-ready dashboards and reports. Previously supported analytics and KPI reporting at Accenture within downstream trading operations, and comfortable working with large datasets, data quality checks, and business-focused insights.
+          MSc Data Science graduate with industry experience at Accenture. Skilled in Python, SQL, and Power BI, with a focus on clean data, clear analysis, and stakeholder-ready reporting.
+        </p>
+        <p class="sub" style="margin-top:10px;">
+          Previously: Application Development Analyst at Accenture
         </p>
         <div class="cta">
           <a class="btn primary" href="#projects">View Projects</a>
@@ -39,44 +43,63 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container">
         <h2>About Me</h2>
         <p>
-          I’m a Data Analyst with an MSc in Data Science from the University of Surrey and hands-on experience working with large datasets in both industry and academic settings.
+          I’m a Junior Data Analyst with an MSc in Data Science from the University of Surrey and hands-on experience working with large datasets in both industry and academic settings.
           <br><br>
           At Accenture, I supported reporting and analytics for downstream trading operations, working with SQL, Python, Azure Data Factory, and Power BI to build dashboards, automate reporting, and ensure data accuracy for stakeholders.
           <br><br>
           I enjoy working across the full data lifecycle — from cleaning and transforming raw data to presenting insights that support informed decision-making. I’m now seeking a Junior or Graduate Data Analyst role where strong analytical fundamentals and attention to data quality matter.
-      </p>
-
+        </p>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section alt">
       <div class="container">
         <h2>Skills</h2>
         <div class="chips">
-          <span class="chip">Python (Pandas, NumPy)</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">EDA & Visualisation</span>
-          <span class="chip">Scikit-learn</span>
-          <span class="chip">NLP (BERT, LDA, NMF)</span>
+          <span class="chip">SQL (joins, aggregations)</span>
+          <span class="chip">Python (pandas, NumPy)</span>
+          <span class="chip">Power BI (DAX, Dashboards)</span>
+          <span class="chip">Excel (Pivot Tables)</span>
+          <span class="chip">EDA & Trend Analysis</span>
+          <span class="chip">Azure Data Factory (ETL)</span>
+          <span class="chip">SQL Server</span>
+          <span class="chip">Databricks</span>
           <span class="chip">Git & GitHub</span>
+          <span class="chip">Machine Learning (Scikit-learn)</span>
+          <span class="chip">NLP (LDA, BERT)</span>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
         <h2>Projects</h2>
 
         <div class="grid">
           <article class="card">
+            <h3>911 Emergency Call Analysis</h3>
+            <p>
+              Analysed 500,000+ emergency call records to identify patterns by time, location, and incident type, supporting insights relevant to operational planning and resource allocation.
+            </p>
+            <div class="meta">
+              <span>Python</span><span>EDA</span><span>Visualisation</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Sharathkumar59/911_emergency" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
             <h3>Conversational Analytics (NLP + Knowledge Graph)</h3>
             <p>
-              Analysed chatbot conversations using sentiment analysis, topic modelling, and Wikidata knowledge graph queries.
+              Analysed 10,000+ chatbot interactions using sentiment analysis, topic modelling, and knowledge graph queries to evaluate response quality, user behaviour, and analytical accuracy.
             </p>
             <div class="meta">
               <span>Python</span><span>NLP</span><span>Wikidata</span>
@@ -90,37 +113,23 @@
           <article class="card">
             <h3>Sales Performance Dashboard (Power BI)</h3>
             <p>
-              Built an interactive sales performance report showing KPI trends across salespeople, product categories, and geography.
+              Built an interactive Power BI dashboard to track sales KPIs across products, regions, and time, supporting management reporting and performance reviews.
             </p>
             <div class="meta">
               <span>Power BI</span><span>DAX</span><span>Reporting</span>
             </div>
             <div class="links">
               <a href="https://www.notion.so/Sharath-Ravindra-Portfolio-2fc4ef8992bd809cbe4ff7c8f4ee0906" target="_blank" rel="noreferrer">Screenshots</a>
-              <a href="#contact">Request live link</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>911 Emergency Calls (Python EDA)</h3>
-            <p>
-              Explored emergency call patterns by time, day, and category to surface operational insights.
-            </p>
-            <div class="meta">
-              <span>Python</span><span>EDA</span><span>Time Series</span>
-            </div>
-            <div class="links">
-              <a href="https://github.com/Sharathkumar59/911_emergency" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
           <article class="card">
             <h3>SQL Car Dealership Data Model</h3>
             <p>
-              Designed a relational schema (PK/FK) and wrote join + aggregation queries to answer business questions.
+              Designed a relational data model and wrote complex joins and aggregation queries to answer realistic business questions around sales, inventory, and customer activity.
             </p>
             <div class="meta">
-              <span>MySQL</span><span>Data Modelling</span><span>JOINs</span>
+              <span>SQL</span><span>Data Modelling</span><span>JOINs</span>
             </div>
             <div class="links">
               <a href="https://github.com/Sharathkumar59/sql-car-dealership-data-model" target="_blank" rel="noreferrer">GitHub</a>
@@ -130,6 +139,7 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
