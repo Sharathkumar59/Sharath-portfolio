@@ -7,8 +7,14 @@
   --accent: #6ea8ff;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -16,7 +22,12 @@ body {
   color: var(--text);
 }
 
-.container { width: min(1000px, 92vw); margin: 0 auto; }
+.container {
+  width: min(1000px, 92vw);
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
 
 .header {
   position: sticky;
@@ -41,14 +52,23 @@ body {
   font-weight: 700;
 }
 
-.nav { display: flex; gap: 14px; align-items: center; }
+.nav {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
 .nav-link {
   color: var(--muted);
   text-decoration: none;
   padding: 8px 10px;
   border-radius: 10px;
 }
-.nav-link:hover { background: rgba(255,255,255,.06); color: var(--text); }
+
+.nav-link:hover {
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
 
 .menu-btn {
   display: none;
@@ -60,17 +80,50 @@ body {
   cursor: pointer;
 }
 
-.section { padding: 64px 0; border-bottom: 1px solid var(--line); }
-.section.alt { background: rgba(255,255,255,.03); }
+/* ---------- Sections ---------- */
 
-.hero { padding: 70px 0 60px; }
-h1 { font-size: clamp(32px, 4vw, 46px); margin: 0 0 10px; }
-h2 { font-size: 28px; margin: 0 0 14px; }
-h3 { margin: 0 0 10px; }
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+}
 
-.sub { color: var(--muted); max-width: 720px; line-height: 1.5; }
+.section.alt {
+  background: rgba(255,255,255,.03);
+}
 
-.cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+.hero {
+  padding: 70px 0 60px;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 46px);
+  margin: 0 0 10px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0 0 14px;
+}
+
+h3 {
+  margin: 0 0 10px;
+}
+
+.sub {
+  color: var(--muted);
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* ---------- Buttons ---------- */
+
+.cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -80,12 +133,18 @@ h3 { margin: 0 0 10px; }
   color: var(--text);
   background: rgba(255,255,255,.04);
 }
-.btn.primary { border-color: rgba(110,168,255,.45); }
+
+.btn.primary {
+  border-color: rgba(110,168,255,.45);
+}
+
+/* ---------- Grid & Cards ---------- */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+  align-items: start; /* FIX: stops empty space from tall cards */
 }
 
 .card {
@@ -94,9 +153,21 @@ h3 { margin: 0 0 10px; }
   border-radius: 16px;
   padding: 16px;
 }
-.card p { color: var(--muted); line-height: 1.5; }
 
-.meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 12px; }
+.card p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ---------- Tags / Meta ---------- */
+
+.meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 12px;
+}
+
 .meta span {
   font-size: 12px;
   padding: 6px 8px;
@@ -105,11 +176,59 @@ h3 { margin: 0 0 10px; }
   color: var(--muted);
 }
 
-.links { display: flex; gap: 12px; flex-wrap: wrap; }
-.links a { color: var(--accent); text-decoration: none; }
-.links a:hover { text-decoration: underline; }
+/* ---------- Links ---------- */
 
-.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Power BI Images (Polish) ---------- */
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+/* Keep screenshots tidy on desktop */
+@media (min-width: 761px) {
+  .card img {
+    max-height: 220px;
+    object-fit: cover;
+  }
+}
+
+/* Hover effect for clickable images */
+.card a img {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+/* ---------- Skills Chips ---------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .chip {
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -118,11 +237,14 @@ h3 { margin: 0 0 10px; }
   background: rgba(255,255,255,.03);
 }
 
+/* ---------- Contact ---------- */
+
 .contact-box {
   display: grid;
   gap: 10px;
   margin-top: 14px;
 }
+
 .contact-item {
   display: inline-block;
   padding: 12px 14px;
@@ -132,13 +254,29 @@ h3 { margin: 0 0 10px; }
   color: var(--text);
   text-decoration: none;
 }
-.contact-item:hover { border-color: rgba(110,168,255,.45); }
 
-.footer { padding: 22px 0; color: var(--muted); }
+.contact-item:hover {
+  border-color: rgba(110,168,255,.45);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding: 22px 0;
+  color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
 
 @media (max-width: 760px) {
-  .grid { grid-template-columns: 1fr; }
-  .menu-btn { display: inline-block; }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-btn {
+    display: inline-block;
+  }
+
   .nav {
     display: none;
     position: absolute;
@@ -151,5 +289,13 @@ h3 { margin: 0 0 10px; }
     padding: 10px;
     width: min(240px, 92vw);
   }
-  .nav.open { display: flex; }
+
+  .nav.open {
+    display: flex;
+  }
+
+  /* Allow full image height on mobile */
+  .card img {
+    max-height: none;
+  }
 }
