@@ -17,6 +17,8 @@ body {
   color: var(--text);
 }
 
+a, button { -webkit-tap-highlight-color: transparent; }
+
 .container { width: min(1000px, 92vw); margin: 0 auto; }
 
 /* Header */
@@ -28,21 +30,22 @@ body {
   border-bottom: 1px solid var(--line);
   z-index: 10;
 }
- 
+
 .nav-wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 14px 0;
+  gap: 16px;
 }
 
 .logo {
   color: var(--text);
-  font-weight: 700;
   text-decoration: none;
+  font-weight: 700;
 }
 
-.nav { display: flex; gap: 14px; }
+.nav { display: flex; gap: 14px; align-items: center; }
 
 .nav-link {
   color: var(--muted);
@@ -59,22 +62,25 @@ body {
 
 .hero { padding: 70px 0 60px; }
 
-h1 { font-size: clamp(32px, 4vw, 46px); }
-h2 { font-size: 28px; }
-h3 { margin-bottom: 8px; }
+h1 { font-size: clamp(32px, 4vw, 46px); margin: 0 0 10px; }
+h2 { font-size: 28px; margin: 0 0 14px; }
+h3 { margin: 0 0 10px; transition: color .2s ease; }
 
-.sub { color: var(--muted); max-width: 720px; }
+.sub { color: var(--muted); max-width: 720px; line-height: 1.5; }
 
 /* Buttons */
-.cta { display: flex; gap: 12px; margin-top: 18px; }
+.cta { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
 
 .btn {
+  display: inline-block;
+  text-decoration: none;
   border: 1px solid var(--line);
   padding: 10px 14px;
   border-radius: 12px;
-  background: rgba(255,255,255,.04);
   color: var(--text);
-  text-decoration: none;
+  background: rgba(255,255,255,.04);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
 }
 
 .btn.primary { border-color: rgba(110,168,255,.45); }
@@ -85,7 +91,9 @@ h3 { margin-bottom: 8px; }
   outline-offset: 2px;
 }
 
-/* Grid */
+.btn:active { transform: translateY(1px); }
+
+/* Grid & Cards */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -93,25 +101,27 @@ h3 { margin-bottom: 8px; }
   align-items: start;
 }
 
-/* Cards */
 .card {
-  background: rgba(255,255,255,.03);
   border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
   border-radius: 16px;
   padding: 16px;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
 }
+
+.card p { color: var(--muted); line-height: 1.5; }
 
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(0,0,0,.35);
   border-color: rgba(110,168,255,.35);
+  background: rgba(255,255,255,.05);
 }
 
-.card p { color: var(--muted); }
+.card:hover h3 { color: #fff; }
 
-/* Meta */
-.meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+/* Tags / Meta */
+.meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 12px; }
 
 .meta span {
   font-size: 12px;
@@ -119,18 +129,28 @@ h3 { margin-bottom: 8px; }
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--muted);
+  background: rgba(255,255,255,.02);
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 
 .card:hover .meta span {
   background: rgba(110,168,255,.12);
   color: var(--text);
+  border-color: rgba(110,168,255,.45);
 }
+
+/* Links */
+.links { display: flex; gap: 12px; flex-wrap: wrap; }
+.links a { color: var(--accent); text-decoration: none; }
+.links a:hover { text-decoration: underline; }
 
 /* Images */
 .img-stack { display: grid; gap: 10px; margin-top: 12px; }
 
 .card img {
+  display: block;
   width: 100%;
+  height: auto;
   border-radius: 12px;
   border: 1px solid var(--line);
 }
@@ -139,35 +159,116 @@ h3 { margin-bottom: 8px; }
   .card img { max-height: 220px; object-fit: cover; }
 }
 
-/* Chips */
+.card a img { transition: transform .2s ease, box-shadow .2s ease; }
+.card a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+/* Skill chips */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 
 .chip {
   border: 1px solid var(--line);
-  padding: 8px 10px;
   border-radius: 999px;
+  padding: 8px 10px;
   color: var(--muted);
+  background: rgba(255,255,255,.03);
 }
 
-/* Transferable */
+/* How I work */
 .work-list {
   color: var(--muted);
   line-height: 1.6;
   padding-left: 18px;
 }
 
-/* Contact */
-.contact-box { display: grid; gap: 10px; margin-top: 14px; }
+/* Contact buttons */
+.contact-box {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  margin-bottom: 18px;
+}
 
 .contact-item {
+  display: inline-block;
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
   color: var(--text);
   text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
 }
 
-.contact-item:hover { border-color: rgba(110,168,255,.45); }
+.contact-item:hover {
+  border-color: rgba(110,168,255,.45);
+  transform: translateY(-1px);
+}
+
+/* Divider between buttons and form */
+.contact-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+/* Contact form */
+.contact-form {
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.03);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact-form label {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(11,15,25,.6);
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid rgba(110,168,255,.35);
+  outline-offset: 2px;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 10px;
+}
 
 /* Footer */
 .footer { padding: 22px 0; color: var(--muted); }
@@ -175,4 +276,5 @@ h3 { margin-bottom: 8px; }
 /* Responsive */
 @media (max-width: 760px) {
   .grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
 }
