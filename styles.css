@@ -28,7 +28,7 @@ body {
   border-bottom: 1px solid var(--line);
   z-index: 10;
 }
-
+ 
 .nav-wrap {
   display: flex;
   justify-content: space-between;
