@@ -13,10 +13,7 @@
     <div class="container nav-wrap">
       <a class="logo" href="#home">Sharath Kumar Jogi Ravindra</a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        ☰
-      </button>
-
+      <!-- Menu button REMOVED (desktop-only nav) -->
       <nav class="nav" id="nav">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -98,7 +95,7 @@
       </div>
     </section>
 
-    <!-- TRANSFERABLE SKILLS -->
+    <!-- HOW I WORK -->
     <section id="transferable" class="section">
       <div class="container">
         <h2>How I Work</h2>
@@ -131,9 +128,7 @@
               <span>Python</span><span>EDA</span><span>Visualisation</span>
             </div>
             <div class="links">
-              <a href="https://github.com/Sharathkumar59/911-emergency-calls-analysis" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              <a href="https://github.com/Sharathkumar59/911-emergency-calls-analysis" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
@@ -147,9 +142,7 @@
               <span>Python</span><span>NLP</span><span>Evaluation Metrics</span>
             </div>
             <div class="links">
-              <a href="https://github.com/Sharathkumar59/conversational-analytics-nlp-kg" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              <a href="https://github.com/Sharathkumar59/conversational-analytics-nlp-kg" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
 
@@ -182,9 +175,7 @@
               <span>SQL</span><span>Data Modelling</span><span>JOINs</span>
             </div>
             <div class="links">
-              <a href="https://github.com/Sharathkumar59/sql-car-dealership-data-model" target="_blank" rel="noreferrer">
-                GitHub
-              </a>
+              <a href="https://github.com/Sharathkumar59/sql-car-dealership-data-model" target="_blank" rel="noreferrer">GitHub</a>
             </div>
           </article>
         </div>
@@ -195,15 +186,58 @@
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
-        <p>If you’d like to discuss roles or projects, feel free to reach out.</p>
+        <p class="sub">If you’d like to discuss roles or projects, feel free to reach out.</p>
 
+        <!-- Keep these 3 buttons -->
         <div class="contact-box">
-          <a class="contact-item" href="mailto:sharathjogi59@gmail.com">sharathjogi59@gmail.com</a>
-          <a class="contact-item" href="https://www.linkedin.com/in/sharath-kumar-j-r-1922ab289" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="contact-item" href="https://github.com/Sharathkumar59" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="contact-item"
+             href="mailto:sharathjogi59@gmail.com?subject=Data%20Analyst%20Opportunity">
+            sharathjogi59@gmail.com
+          </a>
+
+          <a class="contact-item"
+             href="https://www.linkedin.com/in/sharath-kumar-j-r-1922ab289"
+             target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+
+          <a class="contact-item"
+             href="https://github.com/Sharathkumar59"
+             target="_blank" rel="noreferrer">
+            GitHub
+          </a>
         </div>
+
+        <!-- Add form as well (Formspree) -->
+        <div class="contact-divider"><span>Or send a message</span></div>
+
+        <form class="contact-form"
+              action="https://formspree.io/f/xqedkvla"
+              method="POST">
+          <div class="form-grid">
+            <label>
+              Name
+              <input name="name" type="text" required />
+            </label>
+
+            <label>
+              Email
+              <input name="email" type="email" required />
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <input type="hidden" name="_subject" value="Portfolio Contact Message" />
+
+          <button class="btn primary" type="submit">Send Message</button>
+          <p class="form-note">This message will be delivered to my email.</p>
+        </form>
       </div>
-    </section> 
+    </section>
 
     <footer class="footer">
       <div class="container">
@@ -213,5 +247,13 @@
   </main>
 
   <script src="script.js"></script>
+
+  <!-- Remove “stuck highlight” after click (mouse users only) -->
+  <script>
+    document.querySelectorAll('a.btn, button.btn').forEach((el) => {
+      el.addEventListener('mouseup', () => el.blur());
+      el.addEventListener('mouseleave', () => el.blur());
+    });
+  </script>
 </body>
 </html>
