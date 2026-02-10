@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +14,6 @@
     <div class="container nav-wrap">
       <a class="logo" href="#home">Sharath Kumar Jogi Ravindra</a>
 
-      <!-- Menu button REMOVED (desktop-only nav) -->
       <nav class="nav" id="nav">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -32,20 +32,19 @@
         <h1>Data Analyst</h1>
 
         <p class="sub">
-         Data Analyst with an MSc in Data Science and over two years of hands-on experience
-         working with real-world data across enterprise and operational environments (M&S Simply Food via SSP UK & Ireland).
+          Data Analyst with an MSc in Data Science and over two years of hands-on experience
+          working with real-world data across enterprise and operational environments.
         </p>
 
-      <p class="sub">
-        Experienced in analysing large datasets using SQL and Python, building reliable data
-        pipelines, and delivering clear, decision-focused reporting through Power BI dashboards.
-      </p>
+        <p class="sub">
+          Experienced in analysing large datasets using SQL and Python, building reliable data pipelines,
+          and delivering clear, decision-focused reporting through Power BI dashboards.
+        </p>
 
-      <p class="sub">
-        Previously supported analytics and KPI reporting for Shell’s Downstream Trading operations
-        at Accenture, and currently work with live sales and inventory data in a retail environment
-        to support day-to-day decision-making.
-      </p>
+        <p class="sub">
+          Previously supported analytics and KPI reporting for Shell’s Downstream Trading operations at Accenture,
+          and currently work with live sales and inventory data in a retail environment to support day-to-day decision-making.
+        </p>
 
         <div class="cta">
           <a class="btn primary" href="#projects">View Analytical Work</a>
@@ -195,7 +194,6 @@
         <h2>Contact</h2>
         <p class="sub">If you’d like to discuss roles or projects, feel free to reach out.</p>
 
-        <!-- Keep these 3 buttons -->
         <div class="contact-box">
           <a class="contact-item"
              href="mailto:sharathjogi59@gmail.com?subject=Data%20Analyst%20Opportunity">
@@ -215,7 +213,6 @@
           </a>
         </div>
 
-        <!-- Add form as well (Formspree) -->
         <div class="contact-divider"><span>Or send a message</span></div>
 
         <form class="contact-form"
@@ -253,14 +250,41 @@
     </footer>
   </main>
 
-  <script src="script.js"></script>
+  <!-- ===== CHATBOT (Sharath FAQ) ===== -->
+  <button id="chatFab" class="chat-fab" type="button" aria-haspopup="dialog" aria-controls="chatModal">
+    Chat with Me
+  </button>
 
-  <!-- Remove “stuck highlight” after click (mouse users only) -->
-  <script>
-    document.querySelectorAll('a.btn, button.btn').forEach((el) => {
-      el.addEventListener('mouseup', () => el.blur());
-      el.addEventListener('mouseleave', () => el.blur());
-    });
-  </script>
+  <div id="chatOverlay" class="chat-overlay" hidden></div>
+
+  <div id="chatModal" class="chat-modal" role="dialog" aria-modal="true" aria-labelledby="chatTitle" hidden>
+    <button class="chat-close" id="chatClose" type="button" aria-label="Close chatbot">×</button>
+
+    <h3 id="chatTitle">Sharath’s FAQ Chat</h3>
+    <p class="chat-subtitle">Ask anything about my background, skills, or projects.</p>
+
+    <div class="chat-log" id="chatLog" aria-live="polite"></div>
+
+    <div class="chat-quick">
+      <button type="button" data-q="about">About me</button>
+      <button type="button" data-q="skills">Key skills</button>
+      <button type="button" data-q="experience">Experience</button>
+      <button type="button" data-q="tools">Tools</button>
+      <button type="button" data-q="projects">Projects</button>
+      <button type="button" data-q="roles">Roles I’m targeting</button>
+      <button type="button" data-q="strengths">How I work</button>
+      <button type="button" data-q="fun">Fun fact</button>
+    </div>
+
+    <form class="chat-send" id="chatForm">
+      <input class="chat-msg" id="chatMsg" type="text" placeholder="Type a question..." autocomplete="off" />
+      <button class="chat-send-btn" type="submit">Send</button>
+    </form>
+
+    <p class="chat-hint">Tip: try “What did you do at Accenture?”</p>
+  </div>
+  <!-- ===== END CHATBOT ===== -->
+
+  <script src="script.js"></script>
 </body>
 </html>
