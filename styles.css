@@ -313,6 +313,15 @@ h3 { margin: 0 0 10px; transition: color .2s ease; }
 .msg.user strong { color: #1f6fff; }
 .msg.bot strong { color: #19a34a; }
 
+.msg.bot ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
+
+.msg.bot li {
+  margin: 4px 0;
+}
+
 .chat-quick {
   display: grid;
   grid-template-columns: 1fr 1fr;
